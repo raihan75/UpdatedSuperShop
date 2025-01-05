@@ -52,7 +52,7 @@
                     </form>
         
                     <!-- Icon Navigation -->
-                    <div class="navItem align-items-center">
+                    <div class="navItem d-flex align-items-center">
                         <div class="rowItem">
                             <i class="fas fa-map-marker-alt"></i>
                             <span class="iconTitle">Store Locations</span>
@@ -296,7 +296,79 @@
         </div>
     </section>
 
+    <!-- Bannar -->
+    <section class="d-flex my-4 Bannar align-items-center" >
+        <div class="BannerElement">
+            <div class="LogoDiv">
+                <img src="./img/logo2.png" alt="" srcset="">
+                <div class="TimerDiv">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="row text-center">
+                                <div class="col-3">
+                                    <h3 id="days" class="display-4">00</h3>
+                                    <p>Days</p>
+                                </div>
+                                <div class="col-3">
+                                    <h3 id="hours" class="display-4">00</h3>
+                                    <p>Hours</p>
+                                </div>
+                                <div class="col-3">
+                                    <h3 id="minutes" class="display-4">00</h3>
+                                    <p>Minutes</p>
+                                </div>
+                                <div class="col-3">
+                                    <h3 id="seconds" class="display-4">00</h3>
+                                    <p>Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <script>
+                        // Set the date we're counting down to (1 month from now)
+                        const countDownDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
+
+                        // Update the countdown every 1 second
+                        const x = setInterval(function () {
+                            // Get today's date and time
+                            const now = new Date().getTime();
+
+                            // Find the distance between now and the countdown date
+                            const distance = countDownDate - now;
+
+                            // Time calculations for days, hours, minutes and seconds
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Display the result
+                            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+                            // If the countdown is finished, write some text
+                            if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("days").innerHTML = "00";
+                                document.getElementById("hours").innerHTML = "00";
+                                document.getElementById("minutes").innerHTML = "00";
+                                document.getElementById("seconds").innerHTML = "00";
+                            }
+                        }, 1000);
+                    </script>
+                </div>
+            </div>
+            <div class="LogoDiv">
+                <h1>Hi</h1>
+            </div>
+            <div class="LogoDiv">
+                <h1>Hi</h1>
+            </div>
+        </div>
+    </section>
 
 
     <section class="card-slider">
@@ -392,6 +464,38 @@
         </div>
     </section>
 
+    <!-- Logo Slider -->
+    <div class="logos">
+        <div class="logo_items">
+            <img src="https://1000logos.net/wp-content/uploads/2021/12/Maggi-logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/07/Oreo-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/07/Doritos-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/09/Chuck-e-Cheeses-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2018/03/Kit-Kat-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/07/Hershey-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/10/Pringles-logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/06/Lays-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/10/MMs-logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/08/Cadbury-Dairy-Milk-Logo.png">
+
+        </div>
+        <div class="logo_items">
+            <img src="https://1000logos.net/wp-content/uploads/2021/12/Maggi-logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/07/Oreo-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/07/Doritos-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/09/Chuck-e-Cheeses-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2018/03/Kit-Kat-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/07/Hershey-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/10/Pringles-logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2020/06/Lays-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/10/MMs-logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2022/08/Cadbury-Dairy-Milk-Logo.png">
+
+        </div>
+    </div>
+
     <section class="ProductList">
         <div class="container">
             <div class="row">
@@ -451,48 +555,115 @@
         </div>
     </section>
 
+    
+    <!-- Testimonial Carousel -->
+    <section class="testimonial text-center">
+        <div class="container">
+
+            <div class="heading white-heading">
+                Testimonial
+            </div>
+            <div id="testimonial4"
+                class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
+                data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <h4>Client 1</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <h4>Client 2</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <h4>Client 3</h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
 
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="footer-col">
-                    <h4>company</h4>
-                    <ul style="padding-left: 0;">
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul style="padding-left: 0;">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>online shop</h4>
-                    <ul style="padding-left: 0;">
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
+                <div class="col-lg-4 footer-section">
+                    <div class="footer-logo">CompanyName</div>
+                    <p class="footer-about">We are dedicated to providing the best service to our customers. Our mission
+                        is to create innovative solutions that make a difference in people's lives.</p>
                     <div class="social-links">
-                        <a href="#"><i style="line-height: 40px;" class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i style="line-height: 40px;" class="fab fa-twitter"></i></a>
-                        <a href="#"><i style="line-height: 40px;" class="fab fa-instagram"></i></a>
-                        <a href="#"><i style="line-height: 40px;" class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 footer-section">
+                    <h5>Newsletter</h5>
+                    <p class="footer-about">Subscribe to our newsletter for updates, news, and exclusive offers.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+                <p>© 2024 CompanyName. All rights reserved.</p>
             </div>
         </div>
     </footer>
